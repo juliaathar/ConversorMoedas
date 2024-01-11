@@ -24,15 +24,16 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal"
                 android:ems="10"
-                android:id="@+id/input_valor" tools:layout_editor_absoluteY="246dp"
-                tools:layout_editor_absoluteX="100dp"/>
+                android:id="@+id/input_valor"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
         <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_valor" android:id="@+id/radioGroup"
-                app:layout_constraintBottom_toTopOf="@+id/btn_converter">
+                app:layout_constraintTop_toBottomOf="@+id/input_valor" android:id="@+id/options"
+                android:layout_marginTop="32dp">
             <RadioButton
                     android:text="CLP"
                     android:layout_width="wrap_content"
@@ -54,7 +55,15 @@
                 android:text="Converter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/btn_converter"
-                tools:layout_editor_absoluteY="530dp"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/options"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_resultado"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo"
+                app:layout_constraintBottom_toTopOf="@+id/input_valor" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
