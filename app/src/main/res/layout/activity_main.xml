@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/quanto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/txt_titulo"
+                android:textSize="24sp" android:fontFamily="monospace"
+                android:textColor="#09041B" android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/input_valor"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_valor" tools:layout_editor_absoluteY="246dp"
+                tools:layout_editor_absoluteX="100dp"/>
+        <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_valor" android:id="@+id/radioGroup"
+                app:layout_constraintBottom_toTopOf="@+id/btn_converter">
+            <RadioButton
+                    android:text="CLP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_clp"
+            />
+            <RadioButton
+                    android:text="EUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/radio_eur"
+            />
+            <RadioButton
+                    android:text="USD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_usd"
+            />
+        </RadioGroup>
+        <Button
+                android:text="Converter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btn_converter"
+                tools:layout_editor_absoluteY="530dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
